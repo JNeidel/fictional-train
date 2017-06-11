@@ -1,0 +1,28 @@
+.font-main {
+	font-family: 'Raleway', sans-serif;
+}
+.main-tab {
+	margin: 40px 0 40px 0;
+	background-color: red;
+	text-align: center;
+}
+.spacer {
+	margin-top: 20px;
+}
+.my-btn {
+	background-color: #000;
+	margin: 5px 10px 5px 0px;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+.my-btn:hover {
+	background-color: #f00;
+	color: #fff;
+}
+.links {
+	text-decoration: none;
+	color: #fff;
+}
+.links:hover {
+	text-decoration: none;
+}
