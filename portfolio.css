@@ -1,0 +1,59 @@
+.font-main {
+	font-family: 'Raleway', sans-serif;
+}
+.main-tab {
+	margin: 25vh 0 25vh 0;
+	text-align: center;
+}
+.spacer {
+	margin-top: 20px;
+}
+#nav {
+	background-color: #212121;
+}
+.my-btn {
+	background-color: #212121;
+	margin: 5px 10px 5px 0px;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+.my-btn:hover {
+	background-color: #14FFEC;
+	color: #fff;
+}
+.links {
+	text-decoration: none;
+	color: #fff;
+}
+.links:hover {
+	text-decoration: none;
+}
+#logo {
+	margin: 12px 5px 5px 5px; 
+	text-align: center; 
+	color: #fff;
+	text-decoration: none;
+}
+#main-parent {
+	background-image: url("https://wallpaperbrowse.com/media/images/Background-4.jpg");
+	background-position: center; 
+}
+#h1 {
+	color: #fff;
+	margin-bottom: 3vh;
+	font-size: 6vh;
+}
+#projects-tab {
+	margin: 7vh 3vw 7vh 3vw;
+}
+.projects-pics {
+	width: 30vw;
+}
+.social {
+	background-color: #212121;
+	padding: 8vh 0 8vh 0;
+}
+.social-pics:hover {
+	background-color: #fff;
+	border-radius: 50%;
+}
