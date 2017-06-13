@@ -1,4 +1,3 @@
-<br>
 # jneidel
 
 <a href="https://jneidel.github.io/fictional-train/tribute.html">Tribute</a><br>
