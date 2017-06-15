@@ -1,9 +1,40 @@
 <head>
   <link rel="stylesheet" type="text/css" href="quote_machine.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<div class="row" id="nav">
-	    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2"><a style="text-decoration: none;" href="https://jneidel.github.io/fictional-train/"><p id="logo">jneidel</p></a></div>
+	<div class="row">
+		<div id="nav">
+			<div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+				<a style="text-decoration: none;" href="https://jneidel.github.io/fictional-train/"><p id="logo">jneidel</p></a></div>
+			<div class="col-xs-11 col-sm-11 col-md-10 col-lg-10"></div>
+		</div>
 	</div>
+
+	<div class="row" style="margin-top: 50px;">
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center zuz">
+			<p id="i">Sample Text</p>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+			<a href="#"><button class="btn t">Click</button></a>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+			<p>Test</p>
+		</div>
+	</div>
+
+	<script>
+  		$(document).ready(function() {
+  			var quote;
+  			var name;
+
+    		$(".t").on("click", function(){
+    			httpGet("http://api.forismatic.com/api/1.0/");
+    			/*$.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(json) {
+  						$(".zuz").html(json[0].content);;
+    			});*/
+    		});
+  		});	
+	</script>
 </body>
