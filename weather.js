@@ -33,5 +33,21 @@ $(document).ready(function() {
 
 	getLocation(returnLocation);
 
-	
+	/*
+	Icon possibilities:
+	clear-day, 
+	clear-night, 
+	rain, 
+	snow, 
+	sleet, 
+	wind, 
+	fog, 
+	cloudy, 
+	partly-cloudy-day,
+	partly-cloudy-night
+
+	ensure that a default is defined
+
+	https://darksky.net/dev/docs/response
+	*/
 });
