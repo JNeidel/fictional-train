@@ -1,1 +1,10 @@
-
+#body {
+	font-family: "Pridi";
+}
+#nav-button {
+	margin: 15px 15px 15px 15px;
+}
+#main-icon {
+	height: 128px;
+	width: 128px;
+}
