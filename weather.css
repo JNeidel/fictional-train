@@ -1,0 +1,53 @@
+#body {
+	background-color: #e70000;
+	font-family: "Raleway";
+}
+#nav-button {
+	color: #fff;
+	background-color: #2A363B;
+	margin: 15px 15px 7vh 15px;
+	cursor: hand;
+}
+#main {
+	color: #fff;
+	background-color: #2A363B;
+	border-radius: 1%;
+	min-height: 62vh;
+}
+#main-place {
+	margin-top: 10px;
+	font-size: 8vh;
+}
+#main-desc {
+	font-size: 4vh;
+}
+#main-temp {
+	font-size: 15vh;
+}
+#main-placeholder {
+	margin-top: 10vh;
+}
+#main-placeholder-icon {
+	width: 40vh;
+	max-width: 256px;
+	height: 40vh;
+	max-height: 256px;
+}
+#main-icon {
+	margin-top: 2vh;
+	width: 35vh;
+	max-width: 256px;
+	height: 35vh;
+	max-height: 256px;
+}
+.toogle-temp-icons {
+	width: 10vh;
+	max-width: 48px;
+	height: 10vh;
+	max-height: 48px;
+	margin-bottom: 20px;
+	margin-right: 2vw;
+	border-radius: 50%;
+	cursor: hand;
+	visibility: hidden;
+}

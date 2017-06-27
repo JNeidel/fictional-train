@@ -1,0 +1,35 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="weather.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body id="body">
+
+	<div class="row">
+		<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+			<a href="https://jneidel.github.io/fictional-train" target="blank"><button id="nav-button" class="btn">jneidel</button></a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-1 col-sm-2 col-md-2 col-lg-3"></div>
+		<div id="main" class="col-xs-10 col-sm-8 col-md-8 col-lg-6 text-center">
+
+			<p id="main-place"></p>
+			<div id="main-placeholder">
+				<img id="main-placeholder-icon" src="pictures/weather loading animation.svg"></div>
+
+			<div class="row">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+					<div id="main-desc-temp"></div>
+					
+				</div>
+				<div id="main-icon-div" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="weather.js"></script>
+</body>
