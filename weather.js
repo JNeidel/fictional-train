@@ -49,38 +49,38 @@ $(document).ready(function() {
 
 				switch (data.currently.icon) { //Choose icon to display
 					case ("clear-day"):
-						$("#main-icon").attr("src", "pictures/weather clear-day.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather clear-day.png">');
 						break;
 					case ("clear-night"):
-						$("#main-icon").attr("src", "pictures/weather clear-night.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather clear-night.png">');
 						break;
 					case ("rain"):
-						$("#main-icon").attr("src", "pictures/weather rain.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather rain.png">');
 						break;
 					case ("snow"):
-						$("#main-icon").attr("src", "pictures/weather snow.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather snow.png">');
 						break;
 					case ("sleet"):
-						$("#main-icon").attr("src", "pictures/weather sleet.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather sleet.png">');
 						break;
 					case ("wind"):
-						$("#main-icon").attr("src", "pictures/weather wind.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather wind.png">');
 						break;
 					case ("fog"):
-						$("#main-icon").attr("src", "pictures/weather fog.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather fog.png">');
 						break;
 					case ("cloudy"):
-						$("#main-icon").attr("src", "pictures/weather cloudy.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather cloudy.png">');
 						break;
 					case ("partly-cloudy-day"):
 						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather partly-cloudy-day.png">');
-						//$("#main-icon").attr("src", "pictures/weather partly-cloudy-day.png");
 						break;
 					case ("partly-cloudy-night"):
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather partly-cloudy-night.png">');
 						$("#main-icon").attr("src", "pictures/weather partly-cloudy-night.png");
 						break;
 					default:
-						$("#main-icon").attr("src", "pictures/weather cloudy.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather cloudy.png">');
 						break;
 				};
 			}
