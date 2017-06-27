@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var latitude;
 	var longitude;
 	toggle_fahrenheit = false;
+	console.log(toggle_fahrenheit);
 
 	function getLocation (callback) {
 		navigator.geolocation.getCurrentPosition(function(position) {
@@ -24,17 +25,27 @@ $(document).ready(function() {
 			dataType: "jsonp",
 			async: false,
 			success: function (data) {
+				//Add desc/temp/temp icons
+				$("#main-desc-temp").html('<p id="main-desc"><br></p><p id="main-temp"><br></p><img class="toogle-temp-icons" id="temp-icon-c" src="pictures/weather celsius.png">  <img class="toogle-temp-icons" id="temp-icon-f" src="pictures/weather fahrenheit.png">');
+				$(".toogle-temp-icons").css("visibility", "visible");
+
 				temp_in_f = Math.round(data.currently.apparentTemperature);
 				temp_in_c = Math.round((data.currently.apparentTemperature - 32) / (9 / 5));
 
-				if (toggle_fahrenheit) { //Display temp in f/c
-					$("#main-temp").text(String(temp_in_f) + " °f".slice(1));
+				if (toggle_fahrenheit) { //Display temp in f/c, change temp icons background
+					$("#main-temp").text(String(temp_in_f) + "°F".slice(1));
+					$("#temp-icon-f").css("background-color", "#e70000");
+					$("#temp-icon-c").css("background-color", "");
 				} else {
-					$("#main-temp").html(String(temp_in_c) + "°c".slice(1));
+					$("#main-temp").html(String(temp_in_c) + "°C".slice(1));
+					$("#temp-icon-c").css("background-color", "#e70000");
+					$("#temp-icon-f").css("background-color", "");
 				}
 
 				$("#main-place").text(data.timezone.split("/")[1]); //Display location
 				$("#main-desc").text(data.currently.summary); //Readable weather
+
+				$("#main-placeholder").remove(); //Remove placeholder
 
 				switch (data.currently.icon) { //Choose icon to display
 					case ("clear-day"):
@@ -62,7 +73,8 @@ $(document).ready(function() {
 						$("#main-icon").attr("src", "pictures/weather cloudy.png");
 						break;
 					case ("partly-cloudy-day"):
-						$("#main-icon").attr("src", "pictures/weather partly-cloudy-day.png");
+						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather partly-cloudy-day.png">');
+						//$("#main-icon").attr("src", "pictures/weather partly-cloudy-day.png");
 						break;
 					case ("partly-cloudy-night"):
 						$("#main-icon").attr("src", "pictures/weather partly-cloudy-night.png");
@@ -76,6 +88,15 @@ $(document).ready(function() {
 	}
 
 	getLocation(returnLocation);
+
+	$(document).on("click", "#temp-icon-c", function() {
+		toggle_fahrenheit = false;
+		getLocation(returnLocation);
+	});
+	$(document).on("click", "#temp-icon-f", function() {
+		toggle_fahrenheit = true;
+		getLocation(returnLocation);
+	});
 
 	/*
 	https://darksky.net/dev/docs/response
