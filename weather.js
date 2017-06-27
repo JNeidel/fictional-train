@@ -33,11 +33,11 @@ $(document).ready(function() {
 				temp_in_c = Math.round((data.currently.apparentTemperature - 32) / (9 / 5));
 
 				if (toggle_fahrenheit) { //Display temp in f/c, change temp icons background
-					$("#main-temp").text(String(temp_in_f) + "°F".slice(1));
+					$("#main-temp").text(String(temp_in_f) + "°F");
 					$("#temp-icon-f").css("background-color", "#e70000");
 					$("#temp-icon-c").css("background-color", "");
 				} else {
-					$("#main-temp").html(String(temp_in_c) + "°C".slice(1));
+					$("#main-temp").html(String(temp_in_c) + "°C");
 					$("#temp-icon-c").css("background-color", "#e70000");
 					$("#temp-icon-f").css("background-color", "");
 				}
