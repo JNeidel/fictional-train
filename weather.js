@@ -3,7 +3,6 @@ $(document).ready(function() {
 	var latitude;
 	var longitude;
 	toggle_fahrenheit = false;
-	console.log(toggle_fahrenheit);
 
 	function getLocation (callback) {
 		navigator.geolocation.getCurrentPosition(function(position) {
