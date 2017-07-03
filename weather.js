@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	var latitude;
 	var longitude;
-	toggle_fahrenheit = false;
+	var toggle_fahrenheit = false;
 
 	function getLocation (callback) {
 		navigator.geolocation.getCurrentPosition(function(position) {
@@ -18,20 +18,20 @@ $(document).ready(function() {
 	}
 
 	function getWeather (lon, lat) {
-		url = "https://api.darksky.net/forecast/2fd9c6e3bd55ef3fb02da8d9d01ae78b/" + String(lat) + "," + String(lon);
+		var url = "https://api.darksky.net/forecast/2fd9c6e3bd55ef3fb02da8d9d01ae78b/" + String(lat) + "," + String(lon);
 		$.ajax(url, {
 			url: url,
 			dataType: "jsonp",
 			async: false,
 			success: function (data) {
-				//Add desc/temp/temp icons
+				$("#main-placeholder").remove(); //If hidden this would create complications with the placeholder
 				$("#main-desc-temp").html('<p id="main-desc"><br></p><p id="main-temp"><br></p><img class="toogle-temp-icons" id="temp-icon-c" src="pictures/weather celsius.png">  <img class="toogle-temp-icons" id="temp-icon-f" src="pictures/weather fahrenheit.png">');
 				$(".toogle-temp-icons").css("visibility", "visible");
 
-				temp_in_f = Math.round(data.currently.apparentTemperature);
-				temp_in_c = Math.round((data.currently.apparentTemperature - 32) / (9 / 5));
+				var temp_in_f = Math.round(data.currently.apparentTemperature);
+				var temp_in_c = Math.round((data.currently.apparentTemperature - 32) / (9 / 5));
 
-				if (toggle_fahrenheit) { //Display temp in f/c, change temp icons background
+				if (toggle_fahrenheit) {
 					$("#main-temp").text(String(temp_in_f) + "°F");
 					$("#temp-icon-f").css("background-color", "#e70000");
 					$("#temp-icon-c").css("background-color", "");
@@ -41,12 +41,9 @@ $(document).ready(function() {
 					$("#temp-icon-f").css("background-color", "");
 				}
 
-				$("#main-place").text(data.timezone.split("/")[1]); //Display location
-				$("#main-desc").text(data.currently.summary); //Readable weather
-
-				$("#main-placeholder").remove(); //Remove placeholder
-
-				switch (data.currently.icon) { //Choose icon to display
+				$("#main-place").text(data.timezone.split("/")[1]); //Location
+				$("#main-desc").text(data.currently.summary); //Readable forecast
+				switch (data.currently.icon) { //Icon
 					case ("clear-day"):
 						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather clear-day.png">');
 						break;
@@ -76,11 +73,9 @@ $(document).ready(function() {
 						break;
 					case ("partly-cloudy-night"):
 						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather partly-cloudy-night.png">');
-						$("#main-icon").attr("src", "pictures/weather partly-cloudy-night.png");
 						break;
 					default:
 						$("#main-icon-div").html('<img id="main-icon" src="pictures/weather cloudy.png">');
-						break;
 				};
 			}
 		});
@@ -96,8 +91,4 @@ $(document).ready(function() {
 		toggle_fahrenheit = true;
 		getLocation(returnLocation);
 	});
-
-	/*
-	https://darksky.net/dev/docs/response
-	*/
 });
