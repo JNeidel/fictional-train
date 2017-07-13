@@ -5,9 +5,14 @@
 	text-decoration: none;
 	color: #000;
 	justify-content: space-around;
-	height: 90vh;
+	height: 75vh;
 	margin: 20px 25vw 0 25vw;
 }
 .results-hover {
 	color: red;
+}
+#search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
