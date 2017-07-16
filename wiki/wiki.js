@@ -22,23 +22,29 @@ function get_wiki_data (query) {
 			async: false,
 			success: function (data) {
 				for (let i = 0; i < data[1].length; i++) {
+					let results_i = 'results-' + String(i)
+					let results_i_text = "results-" + String(i) + "-text"
+
 					if (i === 0) { // Clear previous results
-						$("#results").html("<a href='" + data[3][i] + "' id='results-" + String(i) + "' target='_blank'></a>");
+						$("#results").html("<div id='" + results_i + "'><a id='" + results_i_text + "' href='" + data[3][i] + "' target='_blank'></a>");
 					} else {
-						$("#results").append("<a href='" + data[3][i] + "' id='results-" + String(i) + "' target='_blank'></a>");
+						$("#results").append("<div id='" + results_i + "'><a id='" + results_i_text + "' href='" + data[3][i] + "' target='_blank'></a>");
 					}
-					$("#results-" + String(i)).append("<p>" + data[1][i] + "</p>");
-					if (data[2][i].length > 140) { // Identify the sentence has been cut off
-						$("#results-" + String(i)).append("<p>" + data[2][i].slice(0, 137) + "...</p>");
-					} else {
-						$("#results-" + String(i)).append("<p>" + data[2][i].slice(0, 140) + "</p>");
+
+					$("#" + results_i_text).append("<p>" + data[1][i] + "</p>");
+
+					if (data[2][i].length > 140 && data[2][i].length > 0) { // Identify the sentence has been cut off
+						$("#" + results_i_text).append("<p>" + data[2][i].slice(0, 137) + "...</p>");
+					} else if (data[2][i].length > 0) {
+						$("#" + results_i_text).append("<p>" + data[2][i].slice(0, 140) + "</p>");
 					}
-					$("#results-" + String(i)).css({"text-decoration": "none", "color": "black"});
-					$("#results-" + String(i)).hover(function() {
-						$(this).css("background-color", "red");
-					}, function() {
-						$(this).css("background-color", "#fff");
-					});
+
+					$("#" + results_i).append("</div>")
+
+					$("#" + results_i).css({"background-color": "#2A363B", "padding": "2vh 2vw 1vh 2vw",
+						"margin-bottom": "1vh", "border-radius": "1%"});
+					$("#" + results_i_text).css({"text-decoration": "none", "color": "#fff", 
+						"background-color": "orange", "hover": "hand"});
 				}
 					
 			}
