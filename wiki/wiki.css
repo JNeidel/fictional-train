@@ -1,0 +1,57 @@
+#results {
+	margin: 0 22vw 0 22vw;
+	min-height: 55vh;
+}
+.results-hover {
+	color: red;
+}
+#nav-button {
+	color: #fff;
+	background-color: #2A363B;
+	margin: 2vh 0 2vh 2vh;
+	cursor: hand;
+	font-family: "Montserrat";
+}
+#body {
+	background-color: #e70000;
+	font-family: "Montserrat";	
+}
+#main {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+#random-article-button {
+	background-color: #2A363B;
+	color: #fff;
+	cursor: hand;
+	font-family: "Montserrat";
+}
+#search-button {
+	background-color: #2A363B;
+	color: #fff;
+	cursor: hand;
+	display: inline-block;
+	font-family: "Montserrat";
+}
+#search-bar {
+	border-radius: 3%;
+	display: inline-block;
+	font-family: "Montserrat";
+}
+#random-article {
+	text-align: center;
+	margin: 2vh 0 2vh 0;
+}
+#search {
+	margin-bottom: 3vh;
+}
+#search-headline {
+	margin: 0 0 4vh 0;
+	color: #fff;
+	background-color: #2A363B;
+	padding: 1vh 2vw 1vh 2vw;
+	border-radius: 2%;
+}
