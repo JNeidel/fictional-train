@@ -1,9 +1,9 @@
 # jneidel
 
-<h3>Finished FreeCodeCamp Front End Development Projects</h3>
+# Finished FreeCodeCamp Front End Development Projects
 
-<a href="https://jneidel.github.io/fictional-train/tribute/tribute.html">Tribute</a><br>
-<a href="https://jneidel.github.io/fictional-train/portfolio/portfolio.html">Portfolio</a><br>
-<a href="https://jneidel.github.io/fictional-train/quote_machine/quote_machine.html">Quote Machine</a><br>
-<a href="https://jneidel.github.io/fictional-train/weather/weather.html">Weather App</a><br>
-<a href="https://jneidel.github.io/fictional-train/wiki/wiki.html">Wiki App</a><br>
+[Tribute](https://jneidel.github.io/freecodecamp-projects/tribute/tribute.html)
+[Portfolio](https://jneidel.github.io/freecodecamp-projects/portfolio/portfolio.html)
+[Quote Machine](https://jneidel.github.io/freecodecamp-projects/quote_machine/quote_machine.html)
+[Weather App](https://jneidel.github.io/freecodecamp-projects/weather/weather.html)
+[Wiki App](https://jneidel.github.io/freecodecamp-projects/wiki/wiki.html)
