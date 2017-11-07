@@ -1,10 +1,13 @@
-"use strict";
+.main-logo {
+    height: 32px;
+    width: 32px;
+    border-radius: 5%;
+}
 
-$(document).ready(function() {
-	let data = twitchApi;
+let data = twitchApi;
 
 	for (let i in data) {
-		console.log(data[i])
+		console.log(data, data[i])
 		let main_i = "main-" + String(i);
 		$("#main").append("<div id='" + main_i + "'>");
 		if ("display_name" in data[i]) {
@@ -15,4 +18,3 @@ $(document).ready(function() {
 			$("#" + main_i).append("<img src='" + data[i].stream.logo + "' class='main-logo'><p>" + data[i]["stream"]["display_name"] +"<br>" + data[i]["stream"]["status"] +"</p></div>");
 		}
 	}
-});
